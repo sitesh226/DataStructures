@@ -2,6 +2,7 @@ package binaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class TreeTraversal {
 
@@ -80,6 +81,111 @@ public class TreeTraversal {
 
     }
 
+    public void spiralOrderTraversal(TreeNode root,boolean clockWise){
+        Stack<TreeNode> evenStack=new Stack<>();
+        Stack<TreeNode> oddStack=new Stack<>();
+
+        boolean evenLevel;
+
+        if(clockWise) {
+            oddStack.push(root);
+            evenLevel = false;
+        }
+        else{
+             evenStack.push(root);
+             evenLevel=true;
+        }
+
+        while((evenLevel&&!evenStack.isEmpty())||!oddStack.isEmpty()){
+
+            if(evenLevel){
+
+                while(!evenStack.isEmpty()){
+                    TreeNode tempNode=evenStack.pop();
+                    System.out.print(tempNode.data+ "  ");
+
+                    if(tempNode.right!=null)
+                        oddStack.push(tempNode.right);
+                    if(tempNode.left!=null)
+                        oddStack.push(tempNode.left);
+                }
+            }else {
+
+                while(!oddStack.isEmpty()){
+                    TreeNode tempNode=oddStack.pop();
+                    System.out.print(tempNode.data+ "  ");
+
+                    if(tempNode.left!=null)
+                        evenStack.push(tempNode.left);
+                    if(tempNode.right!=null)
+                        evenStack.push(tempNode.right);
+
+                }
+            }
+
+            //toggle level variable
+            evenLevel=!evenLevel;
+        }
+    }
+
+    public void boundaryTraversal(TreeNode root){
+        System.out.print(root.data+ " ");
+        printLeftEdgeNodes(root.left);
+        printLeafNodes(root);
+        printRightNodesBottomToUp(root.right);
+
+    }
+
+    public void printLeftEdgeNodes(TreeNode node){
+        if(node==null)
+            return;
+
+        //ignore if leaf node
+        if(node.left==null&& node.right==null)
+        {
+            return;
+        }
+
+        System.out.print(node.data+ " ");
+
+        if(node.left!=null)
+            printLeftEdgeNodes(node.left);
+        if(node.right!=null)
+            printLeftEdgeNodes(node.right);
+    }
+
+    public void printLeafNodes(TreeNode node){
+        if(node==null)
+            return;
+
+        if(node.left==null&& node.right==null){
+            System.out.print(node.data+" ");
+            return;
+        }
+        if(node.left!=null)
+            printLeafNodes(node.left);
+        if(node.right!=null)
+            printLeafNodes(node.right);
+    }
+
+    public void printRightNodesBottomToUp(TreeNode node){
+        if(node==null)
+        return;
+
+        //ignore if leaf node
+        if(node.left==null&& node.right==null)
+        {
+            return;
+        }
+
+        if(node.right!=null)
+            printRightNodesBottomToUp(node.right);
+        if(node.left!=null)
+            printRightNodesBottomToUp(node.left);
+
+        System.out.println(node.data+ " ");
+    }
+
     public static void main(String[] args){
         TreeTraversal treeTraversal=new TreeTraversal();
         TreeNode root=treeTraversal.createTree();
@@ -95,6 +201,18 @@ public class TreeTraversal {
 
         System.out.print("In Order traversal:  ");
         treeTraversal.inOrderTraversal(root);
+        System.out.println();
+
+        System.out.print("Spiral order traversal in clockwise:  ");
+        treeTraversal.spiralOrderTraversal(root,true);
+        System.out.println();
+
+        System.out.print("Spiral order traversal anticlockwise:  ");
+        treeTraversal.spiralOrderTraversal(root,false);
+        System.out.println();
+
+        System.out.print("Boundary  traversal :  ");
+        treeTraversal.boundaryTraversal(root);
         System.out.println();
     }
 

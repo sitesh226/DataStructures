@@ -48,6 +48,7 @@ public class ReverseLinkedListInPairs {
             current.next=temp.next;
             temp.next=current;
             current=current.next;
+ 
 
             if(newHead==null){
                 newHead=temp;

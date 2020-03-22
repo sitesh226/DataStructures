@@ -1,5 +1,7 @@
 package stack;
 
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.Stack;
 
 public class SortStackByTempStack {
@@ -33,6 +35,16 @@ public class SortStackByTempStack {
         // This is the temporary stack
         Stack<Integer> tmpStack=sortStack(input);
         System.out.println("Sorted stack is:"+tmpStack);
+        
+//        ArrayList bb=new ArrayList();
+//        bb.add("aaa");
+//        bb.add("aaa");
+//        bb.add("bbb");
+//        
+//        ArrayList aa=new ArrayList(new LinkedHashSet(bb));
+//        for(Object a: aa) {
+//        	System.out.println(a);
+        
 
     }
 }

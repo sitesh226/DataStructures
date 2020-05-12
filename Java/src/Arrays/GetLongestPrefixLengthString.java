@@ -22,8 +22,6 @@ public class GetLongestPrefixLengthString {
 				{
 					break;
 				}
-				
-				
 			}
 			if(j<minLenth)
 				minLenth=j;
@@ -32,8 +30,6 @@ public class GetLongestPrefixLengthString {
 	}
 
 	private static String getMinString(String[] strArr) {
-		// TODO Auto-generated method stub
-		
 		String min=strArr[0];
 		for(String s: strArr) {
 			if(s.length()<min.length())

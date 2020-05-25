@@ -7,9 +7,9 @@ public class MaxSumSubArrayUsingKadaneAlgo {
         int maxSoFar=arr[0];
         int currentSum=arr[0];
 
-        for(int i=0;i<arr.length-1;i++){
+        for(int i=1;i<arr.length;i++){
 
-            currentSum=Math.max(currentSum,currentSum+arr[i]);
+            currentSum=Math.max(arr[i],currentSum+arr[i]);
             maxSoFar=Math.max(currentSum,maxSoFar);
         }
 

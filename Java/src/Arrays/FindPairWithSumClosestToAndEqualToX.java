@@ -6,7 +6,7 @@ public class FindPairWithSumClosestToAndEqualToX {
 
 	public static void main(String[] args)
 	{
-		int array[]={-40,1,3,6,7,8,20};
+		int array[]={-40,1,3,6,7,4,20};
 		findPairWithClosestToX(array,9);
 		findAllPairsEqualToX(array,9);
 		
@@ -55,9 +55,8 @@ public class FindPairWithSumClosestToAndEqualToX {
 	}
 
 	private static void findPairWithClosestToX(int[] arr, int X) {
-	
-		
-		Arrays.sort(arr);
+
+		//Arrays.sort(arr); Not needed
 		
 		int minDiff=Integer.MAX_VALUE;
 		int l=0;

@@ -11,22 +11,22 @@ public class GetLongestPrefixLengthString {
 
 	private static String getLongestCommonPrefix(String[] strArr) {
 		
-		String minLenthString=getMinString(strArr);
-		int minLenth=minLenthString.length();
+		String minLengthString=getMinString(strArr);
+		int minLength=minLengthString.length();
 		
 		for(int i=0;i<strArr.length;i++) {
 			
 			int j;
-			for( j=0;j<minLenth;j++) {
-				if(minLenthString.charAt(j)!=strArr[i].charAt(j))
+			for( j=0;j<minLength;j++) {
+				if(minLengthString.charAt(j)!=strArr[i].charAt(j))
 				{
 					break;
 				}
 			}
-			if(j<minLenth)
-				minLenth=j;
+			if(j<minLength)
+				minLength=j;
 		}
-		return minLenthString.substring(0, minLenth);
+		return minLengthString.substring(0, minLength);
 	}
 
 	private static String getMinString(String[] strArr) {

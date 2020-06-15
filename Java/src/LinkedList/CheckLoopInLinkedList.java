@@ -36,7 +36,10 @@ public class CheckLoopInLinkedList {
             if(slowPointer!=fastPointer)
                 ++loopPosition;
             else
+            {
+                System.out.println("loop exist at node:"+fastPointer.next.data);
                 return true;
+            }
         }
         return false;
     }

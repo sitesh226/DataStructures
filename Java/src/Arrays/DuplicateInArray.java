@@ -7,7 +7,7 @@ public class DuplicateInArray {
 
 
         for(int num : a) {
-            arr[num-1]++;
+            arr[num-1]++; //Set array value to 1.
             if (arr[num-1] > 1) {
                 return num;
             }
@@ -17,7 +17,7 @@ public class DuplicateInArray {
     }
 
     public static void main(String[] args) {
-        int [] arr={3,4,1,4,1};
+        int [] arr={3,5,1,4,1};
         System.out.println(repeatedNumber(arr));
     }
 }

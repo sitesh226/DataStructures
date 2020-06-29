@@ -40,7 +40,7 @@ public class MaxDistanceInArray {
     }
 
     public static void main(String[] args) {
-        int arr[] = {9, 2, 3, 4, 5, 6, 7, 8, 18, 0};
+        int arr[] = {12, 2, 3, 4, 5, 6, 7, 8, 18,0};
         System.out.println("Maximum difference j-i such that arr[j]>=arr[i]:  "+maxDifference(arr));
     }
 }

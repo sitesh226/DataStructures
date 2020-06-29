@@ -15,6 +15,7 @@ public class FIndMinLengthSubArrayToBeSorted {
         int min;
         int max;
 
+        //Find element which is greater than next element.
         for( start=0;start<arr.length-1;start++){
             if(arr[start]>arr[start+1])
                 break;

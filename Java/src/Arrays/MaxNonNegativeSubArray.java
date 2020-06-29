@@ -43,10 +43,11 @@ public class MaxNonNegativeSubArray {
         ArrayList<Integer> arr=new ArrayList<>();
         arr.add(10);
         arr.add(-1);
-        arr.add(2);
-        arr.add(3);
+        arr.add(200);
+        arr.add(300);
         arr.add(-4);
         arr.add(100);
+        arr.add(200);
         System.out.println("Max Non negative subarray:"+getMaxNonNegativeSubArray(arr));
     }
 }

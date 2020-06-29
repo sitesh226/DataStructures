@@ -17,7 +17,7 @@ public class MaxSumSubArrayUsingKadaneAlgo {
     }
 
     public static void main(String[] args) {
-        int [] arr={ 1, 8, -3, -7, 2, 7, -1, 9 };
+        int [] arr={ 1, 8, -3, -7, 2, 7, -1, 2 };
         System.out.println("Get max sum subarray:"+ getMaxSubSubArray(arr));
 
     }

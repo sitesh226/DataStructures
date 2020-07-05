@@ -1,6 +1,11 @@
 package Strings;
 
 import java.util.Arrays;
+/*
+*ABCD, 2 can be written as
+A....C
+...B....D
+ */
 
 public class ZigZagStringsInNRows {
 

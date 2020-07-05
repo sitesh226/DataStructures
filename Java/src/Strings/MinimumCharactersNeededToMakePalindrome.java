@@ -7,7 +7,6 @@ public class MinimumCharactersNeededToMakePalindrome {
         while(input.length()>0){
             if(isPalindrome(input)){
                 break;
-               // return count;
             }else{
                 count++;
                 input=input.substring(0,input.length()-1);

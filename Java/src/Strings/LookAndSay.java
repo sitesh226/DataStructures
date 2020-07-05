@@ -14,10 +14,6 @@ public class LookAndSay {
             char[] previousString=output.get(i-1).toCharArray();
             for (int j=0;j<=previousString.length-1;j++){
                 int count=1;
-                if(j==previousString.length-1){
-                    nextString=nextString+count+previousString[j];
-                    break;
-                }
                 while(j+1<previousString.length&&previousString[j+1]==previousString[j]){
                     count++;
                     j++;

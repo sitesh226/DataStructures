@@ -48,7 +48,7 @@ public class SlidingWindowMaximum {
     public static void main(String[] args){
         int[] arr={2,6,-1,2,4,1,-6,5};
         int [] result=getSlidingWindowMaxiumUsingArray(arr,3);
-     //   int [] result=getSlidingWindowMaximunUsingStack(arr,3);
+       // int [] result=getSlidingWindowMaximunUsingStack(arr,3);
         System.out.println("Sliding window max using array:");
         for(int i: result){
             System.out.print(i+" ");

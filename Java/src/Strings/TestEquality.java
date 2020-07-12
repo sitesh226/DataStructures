@@ -2,6 +2,16 @@ package Strings;
 
 public class TestEquality {
 
+    public static int testTryCatchFinally(){
+        try{
+            return 10;
+        }catch (Exception e){
+
+        }finally {
+            return 20;
+        }
+    }
+
     public static void main(String[] args){
 
         //StringBuffer does not override equals method of object class so on using equals references are checked.
@@ -18,5 +28,8 @@ public class TestEquality {
         s+= "aaaa  ";
         s=s.trim();
         System.out.print(s);
+
+        TestEquality equality=new TestEquality();
+        System.out.println(TestEquality.testTryCatchFinally());
     }
 }

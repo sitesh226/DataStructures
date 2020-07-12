@@ -32,10 +32,17 @@ public class TreeNodeCount {
     }
 
     public void printLeafNodes(TreeNode node){
+        // If node is null, return
+        if (node == null)
+            return;
+
         if(node.left==null && node.right==null)
             System.out.print(" "+ node.data);
         else {
-            printLeafNodes(node.left);
+
+            if(node.left!=null)
+                 printLeafNodes(node.left);
+            if(node.right!=null)
             printLeafNodes(node.right);
         }
     }

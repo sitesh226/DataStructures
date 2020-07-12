@@ -76,7 +76,22 @@ public class TreeTraversal {
         System.out.print(root.data+ " ");
     }
 
-    public void reverseLevelOrderTraversal(){
+    public void reverseLevelOrderTraversal(TreeNode root){
+        System.out.print("Reverse Level order traversal:  ");
+        Queue<TreeNode> queue=new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()) {
+            TreeNode temp = queue.poll();
+            System.out.print(temp.data + " ");
+
+
+            if (temp.right!=null)
+                queue.add(temp.right);
+            if(temp.left!=null)
+                queue.add(temp.left);
+        }
+
+        System.out.println();
 
 
     }
@@ -190,6 +205,7 @@ public class TreeTraversal {
         TreeTraversal treeTraversal=new TreeTraversal();
         TreeNode root=treeTraversal.createTree();
         treeTraversal.levelOrderTraversal(root);
+        treeTraversal.reverseLevelOrderTraversal(root);
 
         System.out.print("Pre Order traversal:  ");
         treeTraversal.preOrderTraversal(root);

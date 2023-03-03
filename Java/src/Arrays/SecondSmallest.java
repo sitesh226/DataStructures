@@ -22,6 +22,7 @@ public class SecondSmallest {
         return secondSmallest;
     }
 
+
     public static void main(String[] args) {
         int [] arr={0,1,3,4,5};
         System.out.println( secondSmallest(arr));

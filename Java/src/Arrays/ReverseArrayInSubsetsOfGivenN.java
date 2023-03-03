@@ -4,10 +4,14 @@ public class ReverseArrayInSubsetsOfGivenN {
 
     private static void reverseArrayInSubsets(int [] arr,int N){
 
+
+
         for(int i=0;i<arr.length-1;i=i+N){
 
             int left=i;
             int right=i+N-1;
+            if(right> arr.length)
+                right= arr.length-1;
 
             while(left<right){
                 int temp=arr[left];
@@ -29,7 +33,7 @@ public class ReverseArrayInSubsetsOfGivenN {
         System.out.println("Initial array :");
         for(int i: arr)
             System.out.print(i+"  ");
-        reverseArrayInSubsets(arr,3);
-        reverseArrayInSubsets(arr,4);
+      //  reverseArrayInSubsets(arr,3);
+        reverseArrayInSubsets(arr,5);
     }
 }

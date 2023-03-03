@@ -18,6 +18,7 @@ public class WaveArray {
             arr.set(i,arr.get(i+1));
             arr.set(i+1,temp);
         }
+
         System.out.println("Arraylist after change: "+ arr);
     }
 

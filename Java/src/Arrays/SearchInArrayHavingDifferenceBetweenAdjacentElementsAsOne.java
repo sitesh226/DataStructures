@@ -7,6 +7,7 @@ package Arrays;
  */
 public class SearchInArrayHavingDifferenceBetweenAdjacentElementsAsOne {
 
+
     private static int searchElement(int[] arr, int element) {
 
         int i=0;

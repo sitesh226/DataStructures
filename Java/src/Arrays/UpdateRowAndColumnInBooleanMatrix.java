@@ -58,9 +58,9 @@ public class UpdateRowAndColumnInBooleanMatrix {
     }
 
     public static void main(String[] args) {
-        int mat[ ][ ] = { {1, 0, 0, 1},
-                {0, 0, 1, 0},
-                {0, 0, 0, 0},};
+        int mat[ ][ ] =  {{1, 0, 0, 1},
+                          {0, 0, 1, 0},
+                          {0, 0, 0, 0}};
         System.out.println("Matrix initially: ");
         printMatrix(mat);
         System.out.println("Matrix after updation:");

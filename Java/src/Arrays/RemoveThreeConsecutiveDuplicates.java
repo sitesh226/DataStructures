@@ -21,6 +21,7 @@ public class RemoveThreeConsecutiveDuplicates {
                 }
             }
         }
+
         for (Character character:arr)
             output+=character;
         System.out.println(output);

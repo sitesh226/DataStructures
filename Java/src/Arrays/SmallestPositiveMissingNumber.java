@@ -39,7 +39,6 @@ public class SmallestPositiveMissingNumber {
         }
 
 
-
         for(int k=0;k<positiveArray.length;k++){
             int x=Math.abs(positiveArray[k]);
             if(x-1<positiveArray.length&&positiveArray[x-1]>0){

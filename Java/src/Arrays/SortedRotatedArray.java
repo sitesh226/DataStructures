@@ -46,7 +46,7 @@ public class SortedRotatedArray {
 	
 	public int getMinimumElementInSortedRotatedArray(int [] arr,int low,int high) {
 		int mid;
-		while(low<high) {
+		while(low<=high) {
 			mid=low+(high-low)/2;
 			
 			if(arr[mid]<arr[high]) {
@@ -67,7 +67,7 @@ public class SortedRotatedArray {
 	public static void main(String[] args) {
 		SortedRotatedArray arrayObject=new SortedRotatedArray();
 		int[] inputArray= {20,25,1,4,6,7,8};
-		//arrayObject.searchElementInSortedRotatedArray(inputArray, 0, inputArray.length-1,25 );
+	//	arrayObject.searchElementInSortedRotatedArray(inputArray, 0, inputArray.length-1,7 );
 		System.out.println(arrayObject.getMinimumElementInSortedRotatedArray(inputArray, 0, inputArray.length-1 ));
 	}
 }

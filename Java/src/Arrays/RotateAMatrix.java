@@ -2,13 +2,13 @@ package Arrays;
 
 public class RotateAMatrix {
 
-    private static int[][] getTransposeOfMatrix(int[][] arr){
+    private static int[][] getTransposeOfMatrix(int[][] arr) {
 
-        for(int i=0;i<arr.length;i++){
-            for(int j=i;j<arr[0].length;j++){
-                int temp=arr[i][j];
-                arr[i][j]=arr[j][i];
-                arr[j][i]=temp;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i; j < arr[0].length; j++) {
+                int temp = arr[i][j];
+                arr[i][j] = arr[j][i];
+                arr[j][i] = temp;
             }
         }
 
@@ -18,45 +18,65 @@ public class RotateAMatrix {
 
     }
 
-    private static int[][] rotateInAntiClockWiseDirection(int[][] arr){
-        getTransposeOfMatrix(arr);
+    private static int[][] rotateInAntiClockWiseDirection(int[][] arr) {
+        arr=getTransposeOfMatrix(arr);
+        for (int i = 0; i < arr.length ; i++) {
+            int j = 0;//Start of any column
+            int k = arr.length-1 ; //end of any column
+            //swap elements in columns
+            while (j < k) {
+                int temp = arr[j][i];
+                arr[j][i] = arr[k][i];
+                arr[k][i] = temp;
 
-
-        int j=arr.length-1;
-        for(int i=0;i<arr.length/2;i++){
-            int [] temp=arr[i];
-            arr[i]=arr[j];
-            arr[j]=temp;
-            j--;
+                j++;
+                k--;
+            }
         }
-
-        System.out.println("Matrix after rotation by 90 anticlockwise");
+        System.out.println("Matrix after rotation by 90  anti clockwise");
         return arr;
 
     }
 
 
-    private static int[][] rotateInClockWiseDirection(int[][] arr){
-        getTransposeOfMatrix(arr);
+    private static int[][] rotateInClockWiseDirection(int[][] arr) {
+        arr=getTransposeOfMatrix(arr);
 
-        for(int i=0;i<arr.length;i++){
-            arr[i]=reverseArray(arr[i]);
+        for (int i = 0; i < arr.length ; i++) {
+            int j = 0;//Start of any row
+            int k = arr.length-1 ; //end of any row
+            //swap elements in row
+            while (j < k) {
+                int temp = arr[i][j];
+                arr[i][j] = arr[i][k];
+                arr[i][k] = temp;
+
+                j++;
+                k--;
+            }
         }
-
         System.out.println("Matrix after rotation by 90 clockwise");
         return arr;
     }
 
-    private static int[] reverseArray(int[] arrayRow){
-        int j=arrayRow.length-1;
-        for(int i=0;i<arrayRow.length/2;i++){
-            int temp=arrayRow[i];
-            arrayRow[i]=arrayRow[j];
-            arrayRow[j]=temp;
-            j--;
-       }
-        return arrayRow;
+    private static int[][] reverseArray(int[][] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            int j = 0;//Start of any row
+            int k = arr.length - 1; //end of any row
+            //swap elements in row
+            while (j <= k) {
+                int temp = arr[i][j];
+                arr[i][j] = arr[i][k];
+                arr[i][k] = temp;
+
+                j++;
+                k--;
+            }
+        }
+        return arr;
     }
+
+
 
     private static void printMatrix(int arr[][])
     {
@@ -77,8 +97,8 @@ public class RotateAMatrix {
 
         System.out.println("Given matrix: ");
         printMatrix(arr);
-     //   rotateInAntiClockWiseDirection(arr);
-        rotateInClockWiseDirection(arr);
+        rotateInAntiClockWiseDirection(arr);
+     //   rotateInClockWiseDirection(arr);
         printMatrix(arr);
 
     }

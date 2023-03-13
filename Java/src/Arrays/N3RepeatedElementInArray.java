@@ -8,6 +8,8 @@ package Arrays;
 public class N3RepeatedElementInArray {
 
     private static int getN3RepeatedElement(int[] arr){
+
+        //Moore's voting algorithm
         int count1=0;int count2=0;
         int first=Integer.MAX_VALUE;
         int second=Integer.MAX_VALUE;
@@ -50,7 +52,7 @@ public class N3RepeatedElementInArray {
 
 
     public static void main(String[] args) {
-        int arr[] = { 1, 2, 3, 1, 1 };
+        int arr[] = { 1, 2, 3, 1, 1,2,1,3,4,5,1,2,2,2,2 };
         System.out.println("Element occurring more than N/3 time:"+getN3RepeatedElement(arr));
     }
 }

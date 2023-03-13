@@ -31,21 +31,23 @@ public class FindCountOfNumbersWithSumEqualToGivenSum {
 
             if(cur == sum) {
                 count++;
+                System.out.print(i+ " ");
                 i += 9;
             }else
                 i++;
 
         }
-        System.out.println(count);
+        System.out.println();
+        System.out.println("Count : "+ count);
 
     }
 
 
     public static void main(String[] args) throws IOException {
-        BufferedReader input = new BufferedReader (new InputStreamReader(System.in));
-        int n = Integer.parseInt(input.readLine());
-        int sum=Integer.parseInt(input.readLine());
-        getCount(n,sum);
+//        BufferedReader input = new BufferedReader (new InputStreamReader(System.in));
+//        int n = Integer.parseInt(input.readLine());
+//        int sum=Integer.parseInt(input.readLine());
+        getCount(2,16);
 
     }
 }

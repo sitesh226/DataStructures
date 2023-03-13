@@ -1,14 +1,16 @@
 package Arrays;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 
 public class FindPairWithSumClosestToAndEqualToX {
 
 	public static void main(String[] args)
 	{
-		int array[]={-40,1,3,6,7,4,20};
-		findPairWithClosestToX(array,9);
-		findAllPairsEqualToX(array,9);
+		int array[]={-40,1,3,6,7,4,20,0};
+
+		findPairWithClosestToX(array,4);
+		findAllPairsEqualToX(array,4);
 		
 		int array1[]={-40,29,3,26,7,8,20};
 		findLeadersInArray(array1);
@@ -34,6 +36,7 @@ public class FindPairWithSumClosestToAndEqualToX {
 	}
 
 	private static void findAllPairsEqualToX(int[] arr, int X) {
+		Arrays.sort(arr);
 		System.out.println("Pairs equal to "+X + ":");
 		int l=0;
 		int r=arr.length-1;
@@ -55,7 +58,7 @@ public class FindPairWithSumClosestToAndEqualToX {
 	}
 
 	private static void findPairWithClosestToX(int[] arr, int X) {
-
+		Arrays.sort(arr);
 		//Arrays.sort(arr); Not needed
 		
 		int minDiff=Integer.MAX_VALUE;

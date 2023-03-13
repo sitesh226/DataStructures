@@ -21,7 +21,7 @@ public class GetLargestPossibleNumberByArrayElements {
             public int compare(String X, String Y) {
                 String XY=X+Y;
                 String YX=Y+X;
-                return XY.compareTo(YX)>0?-1:0;
+                return XY.compareTo(YX)>0?-1:1;
             }
         });
 
@@ -35,11 +35,12 @@ public class GetLargestPossibleNumberByArrayElements {
 
     public static void main(String[] args) {
         List<Integer> input=new ArrayList<>();
-        input.add(3);
+        input.add(9);
         input.add(30);
         input.add(34);
         input.add(5);
-        input.add(9);
-        System.out.println("Largest number"+ getLargestNumber(input));
+        input.add(3);
+        System.out.println("input list : "+input);
+        System.out.println("Largest number "+ getLargestNumber(input));
     }
 }

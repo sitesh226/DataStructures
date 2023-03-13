@@ -29,6 +29,20 @@ public class GetLongestPrefixLengthString {
 		return minLengthString.substring(0, minLength);
 	}
 
+
+
+	public static String minSubString(String strArr[],String minSubString){
+		int i= 0;
+		while(i<strArr.length){
+			if(!strArr[i].contains(minSubString)&&minSubString.length()>0){
+				minSubString=minSubString.substring(0,minSubString.length()-1);
+				i++;
+				minSubString(strArr,minSubString);
+			}
+		}
+		return minSubString;
+	}
+
 	private static String getMinString(String[] strArr) {
 		String min=strArr[0];
 		for(String s: strArr) {

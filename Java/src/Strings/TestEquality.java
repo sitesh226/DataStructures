@@ -27,7 +27,7 @@ public class TestEquality {
         String s = "Hello  ";
         s+= "aaaa  ";
         s=s.trim();
-        System.out.print(s);
+        System.out.println(s);
 
         TestEquality equality=new TestEquality();
         System.out.println(TestEquality.testTryCatchFinally());

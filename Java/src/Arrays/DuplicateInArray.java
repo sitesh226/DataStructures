@@ -16,6 +16,7 @@ public class DuplicateInArray {
         return -1;
     }
 
+
     public static void main(String[] args) {
         int [] arr={3,5,1,4,1};
         System.out.println(repeatedNumber(arr));

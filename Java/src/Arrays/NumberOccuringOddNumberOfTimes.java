@@ -17,7 +17,7 @@ public class NumberOccuringOddNumberOfTimes {
 	public static void main(String[] args) {
 		NumberOccuringOddNumberOfTimes occur=new NumberOccuringOddNumberOfTimes();
 		int[] input= new int[]{20, 40, 50, 40, 20, 30, 30, 50, 20, 40, 40, 20};
-		occur.getOddTimesElement(input);
+		System.out.println("Result :" +occur.getOddTimesElement(input));
 		
 	}
 

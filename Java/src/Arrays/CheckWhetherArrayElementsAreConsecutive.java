@@ -9,22 +9,31 @@ public class CheckWhetherArrayElementsAreConsecutive {
 
         int min=getMin(arr);
         int max=getMax(arr);
+//
+//        if(max-min==arr.length-1){
+//            boolean[] visited=new boolean[arr.length];
+//            for(int i=0;i<=arr.length-1;i++){
+//
+//                if(visited[arr[i]-min]!=false)  //visiting second time
+//                    return false;
+//
+//                visited[arr[i]-min]=true;
+//
+//            }
+//
+//            return true;//If all elements occur once;
+//        }
+//            return false;
 
-        if(max-min==arr.length-1){
-            boolean[] visited=new boolean[arr.length];
-            for(int i=0;i<=arr.length-1;i++){
-
-                if(visited[arr[i]-min]!=false)  //visiting second time
-                    return false;
-
-                visited[arr[i]-min]=true;
-
-            }
-
-            return true;//If all elements occur once;
+        int originalSum=0;
+        for (int i: arr){
+            originalSum=originalSum+i;
         }
-            return false;
+        System.out.println("Original sum:"+ originalSum);
 
+        int expectedSum= (arr.length)*(min+max)/2;
+        System.out.println("Expected sum:"+ expectedSum);
+        return originalSum==expectedSum;
     }
 
 

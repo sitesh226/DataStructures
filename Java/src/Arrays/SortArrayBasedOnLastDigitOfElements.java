@@ -18,6 +18,14 @@ public class SortArrayBasedOnLastDigitOfElements {
 
             }
         });
+//
+//        //Usign Lambda above code would look like:
+//        Collections.sort(input, (o1, o2) -> {
+//            Integer o11=o1%10;
+//            Integer o22=o2%10;
+//            return o11.compareTo(o22);
+//
+//        });
 
         System.out.println("Array after sorting:"+ input);
     }

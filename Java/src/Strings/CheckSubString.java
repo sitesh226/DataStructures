@@ -11,6 +11,7 @@ public class CheckSubString {
             if(s2.indexOf(s1.charAt(i))!=-1){
                 i++;
             }else{
+                System.out.println("Substring doesn't exist");
                 return -1;
             }
         }
@@ -19,7 +20,7 @@ public class CheckSubString {
     }
 
     public static void main(String[] args) {
-        String s1="for";
+        String s1="foz";
         String s2="geeksforgeeks";
         isSubString(s1,s2);
     }

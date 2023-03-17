@@ -36,6 +36,7 @@ public class NearestSmallerElement {
         input.add(0);
         input.add(2);
         input.add(5);
+        System.out.println("Original input:"+input);
         System.out.println("Nearest smallest element array: "+ getNearestSmallerElementsInArray(input));
     }
 }

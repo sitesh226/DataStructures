@@ -1,5 +1,7 @@
 package Strings;
-
+//
+//        If strn is a valid input, then the function returns the equivalent integer
+//        number for the passed string number. If no valid conversion takes place,then the function returns zero.
 public class Atoi {
 
     private static int atoiFunction(String input){

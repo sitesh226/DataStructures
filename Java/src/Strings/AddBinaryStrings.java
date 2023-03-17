@@ -11,7 +11,7 @@ public class AddBinaryStrings {
         while(index1>=0&&index2>=0){
 
             if(s1.charAt(index1)=='1'&&s2.charAt(index2)=='1'){
-                resultString.append(carry==1?0:1);
+                resultString.append(carry==1?1:0);
                 carry=1;
             }else if(s1.charAt(index1)=='1'||s2.charAt(index2)=='1'){
                 resultString.append(carry==1?0:1);

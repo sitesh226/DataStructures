@@ -2,7 +2,7 @@ package Strings;
 
 public class MinimumCharactersNeededToMakePalindrome {
 
-    private static int getMinimumCharactersNeededToMakePalindrome(String input){
+    private static int getMinimumCharactersNeededAtFrontToMakePalindrome(String input){
         int count=0;
         while(input.length()>0){
             if(isPalindrome(input)){
@@ -22,8 +22,8 @@ public class MinimumCharactersNeededToMakePalindrome {
     }
 
     public static void main(String[] args) {
-        String s = "BABABAA";
-        System.out.println("Minimum number of characters needed to make palindrome:"+ getMinimumCharactersNeededToMakePalindrome(s));
+        String s = "abaa";
+        System.out.println("Minimum number of characters needed to make palindrome:"+ getMinimumCharactersNeededAtFrontToMakePalindrome(s));
 
     }
 

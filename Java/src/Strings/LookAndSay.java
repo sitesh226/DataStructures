@@ -26,7 +26,34 @@ public class LookAndSay {
         System.out.println("Sequence:"+ output);
     }
 
+
+    private static void generateLookAndSaySequenceSimplified(int n){
+        if(n<=0){
+            System.out.println("Invalid Input");
+
+        }
+        String result="1";
+        System.out.println("1");
+
+        while(n>0) {
+
+            StringBuilder current = new StringBuilder();
+            for (int i = 0; i < result.length(); i++) {
+                int count = 1;
+                while (i + 1 < result.length() && result.charAt(i) == result.charAt(i + 1)) {
+                    ++count;
+                    ++i;
+                }
+                current.append(count).append(result.charAt(i));
+            }
+            System.out.println(current);
+            result=current.toString();
+            n--;
+        }
+    }
+
     public static void main(String[] args) {
-        generateLookAndSaySequence(7);
+       // generateLookAndSaySequence(7);
+        generateLookAndSaySequenceSimplified(7);
     }
 }

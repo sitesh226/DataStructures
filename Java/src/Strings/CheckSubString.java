@@ -20,7 +20,7 @@ public class CheckSubString {
     }
 
     public static void main(String[] args) {
-        String s1="foz";
+        String s1="for";
         String s2="geeksforgeeks";
         isSubString(s1,s2);
     }

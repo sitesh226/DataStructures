@@ -12,6 +12,7 @@ public class SortedRotatedArray {
  
 			if(arr[mid]==number)
 			{
+				System.out.println("Search Result Index: "+ mid);
 				return mid;
 			}
 			if(arr[mid]<=arr[high])
@@ -67,7 +68,7 @@ public class SortedRotatedArray {
 	public static void main(String[] args) {
 		SortedRotatedArray arrayObject=new SortedRotatedArray();
 		int[] inputArray= {20,25,1,4,6,7,8};
-	//	arrayObject.searchElementInSortedRotatedArray(inputArray, 0, inputArray.length-1,7 );
+		arrayObject.searchElementInSortedRotatedArray(inputArray, 0, inputArray.length-1,7 );
 		System.out.println(arrayObject.getMinimumElementInSortedRotatedArray(inputArray, 0, inputArray.length-1 ));
 	}
 }

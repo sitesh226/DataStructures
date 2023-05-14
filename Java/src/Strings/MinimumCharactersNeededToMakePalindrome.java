@@ -22,7 +22,7 @@ public class MinimumCharactersNeededToMakePalindrome {
     }
 
     public static void main(String[] args) {
-        String s = "abaa";
+        String s = "abaaa";
         System.out.println("Minimum number of characters needed to make palindrome:"+ getMinimumCharactersNeededAtFrontToMakePalindrome(s));
 
     }

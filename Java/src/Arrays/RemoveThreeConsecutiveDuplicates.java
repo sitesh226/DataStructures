@@ -14,7 +14,7 @@ public class RemoveThreeConsecutiveDuplicates {
             if(arr.size()>2){
                 int size=arr.size();
 
-                if(arr.get(size-1)==arr.get(size-2)&&arr.get(size-2)==arr.get(size-3)){
+                if(arr.get(size-1).equals(arr.get(size-2))&&arr.get(size-2).equals(arr.get(size-3))){
                     arr.remove(size-1);
                     arr.remove(size-2);
                     arr.remove(size-3);

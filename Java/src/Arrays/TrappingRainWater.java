@@ -1,4 +1,4 @@
-package stack;
+package Arrays;
 
 public class TrappingRainWater {
 

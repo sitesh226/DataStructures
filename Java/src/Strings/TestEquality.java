@@ -18,9 +18,17 @@ public class TestEquality {
         StringBuffer sb1 = new StringBuffer("Amit");
         StringBuffer sb2 = new StringBuffer("Amit");
         String ss1 = "Amit";
+        String ss2="Amit";
+        String ss3=new String("Amit");
         System.out.println(sb1==sb2);
         System.out.println(sb1.equals(sb2));
         System.out.println(sb1.equals(ss1));
+        System.out.println(ss1.equals(ss2));
+        System.out.println(ss1==ss2);
+        System.out.println(ss1==ss3);
+        System.out.println(ss1.equals(ss3));
+
+
         System.out.println("Poddar".substring(3));
 
         //

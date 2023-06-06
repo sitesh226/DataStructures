@@ -11,6 +11,7 @@ public class TrappingRainWater {
         int[] left=new int[input.length];
         int[] right=new int[input.length];
 
+        // Create an array which stores max left value before the current element
         int max=input[0];
         left[0]=max;
         for (int i=1;i<input.length;i++){
@@ -21,7 +22,7 @@ public class TrappingRainWater {
                 left[i]=input[i];
             }
         }
-
+  // Create an array which stores max right value after the current element
         max=input[input.length-1];
         right[right.length-1]=max;
         for (int i=input.length-2;i>=0;i--){
@@ -33,6 +34,8 @@ public class TrappingRainWater {
             }
         }
 
+
+        // Stored water = minimum(MaxLeft,MaxRight)-currentElement
         for(int i=0;i<input.length;i++){
             result+=Math.min(left[i],right[i])-input[i];
         }

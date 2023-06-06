@@ -36,6 +36,25 @@ public class SlidingWindowMaximum {
         return  result;
     }
 
+
+    public static int[] getSlidingWindowMaxiumUsingArray2(int[] arr,int k){
+        int[] result=new int[arr.length-k+1];
+        int resultIndex=0;
+
+        for(int i=0;i<=arr.length-k;i++){
+
+            int max=Integer.MIN_VALUE;
+            for(int j=i;j<i+k;j++){
+                max= Math.max(max,arr[j]);
+            }
+            result[resultIndex++]=max;
+        }
+        return  result;
+    }
+
+
+
+
     public static int[] getSlidingWindowMaximunUsingStack(int [] arr, int k){
         int result[]=new int[arr.length];
         int l=0;
@@ -65,6 +84,15 @@ public class SlidingWindowMaximum {
        // int [] result=getSlidingWindowMaximunUsingStack(arr,3);
         System.out.println("Sliding window max using array:");
         for(int i: result){
+            System.out.print(i+" ");
+        }
+
+        System.out.println();
+
+        int [] result1=getSlidingWindowMaxiumUsingArray2(arr,3);
+        // int [] result=getSlidingWindowMaximunUsingStack(arr,3);
+        System.out.println("Sliding window max using array sol 2 :");
+        for(int i: result1){
             System.out.print(i+" ");
         }
     }

@@ -25,16 +25,24 @@ public class MaxNonNegativeSubArray {
             if(i>=0){
                 temp=temp+i;
                 copy.add(i);
+
+                if(temp>sum){
+                    sum=temp;
+                    result.clear();
+                    result.addAll(copy);
+                }
+
+
             }else{
                 temp=0;
                 copy.clear();
             }
 
-            if(temp>sum){
-                sum=temp;
-                result.clear();
-                result.addAll(copy);
-            }
+//            if(temp>sum){
+//                sum=temp;
+//                result.clear();
+//                result.addAll(copy);
+//            }
         }
         return result;
     }

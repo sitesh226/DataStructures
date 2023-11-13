@@ -1,5 +1,9 @@
 package Arrays;
 
+import java.util.ArrayList;
+import java.util.*;
+import java.util.stream.Collectors;
+
 /*
 *Find the Minimum length Unsorted Subarray, sorting which makes the complete array sorted
 *If the input array is [0, 1, 15, 25, 6, 7, 30, 40, 50], your program should be able to
@@ -61,9 +65,42 @@ public class FIndMinLengthSubArrayToBeSorted {
 
     }
 
+
+    private static void getMinLengthUnsortedArrayToBeSortedSol2(int[] arr){
+//        Declare a temporary array temp same as given array arr.
+//        Sort the temporary array .
+//        Initialize variable s with 0 and e with 0.
+//        Checking the unequal element from start and storing it in s variable .
+//        Checking the unequal element from end and storing it in e variable.
+//        Returning (e-s+1) .
+//         Printing the result .
+
+        List<Integer> output = Arrays.stream(arr).boxed().collect(Collectors.toList());
+        Collections.sort(output);
+        int start=0;
+        int end=0;
+        for (int i=0;i<arr.length;i++){
+            if(arr[i]!=output.get(i)){
+                start=i;
+                break;
+            }
+        }
+
+        for (int j=arr.length-1;j>=0;j--){
+            if(arr[j]!=output.get(j)){
+                end=j;
+                break;
+            }
+        }
+        System.out.println(" The unsorted sub array which makes the given array sorted lies between the indices "+start +" and "+end);
+
+    }
+
+
     public static void main(String[] args) {
         int arr[] = {10, 12, 20, 30, 25, 40, 32, 31, 35, 50, 60};
-        getMinLengthUnsortedArrayToBeSorted(arr);
+//        getMinLengthUnsortedArrayToBeSorted(arr);
+        getMinLengthUnsortedArrayToBeSortedSol2(arr);
     }
 
 

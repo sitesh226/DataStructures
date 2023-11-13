@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /*
-*Given a list of non negative integers, arrange them such that they form the largest number.
+*Given a list of non-negative integers, arrange them such that they form the largest number.
 *For example:
 *Given [3, 30, 34, 5, 9], the largest formed number is 9534330.
  */
@@ -21,11 +21,11 @@ public class GetLargestPossibleNumberByArrayElements {
             public int compare(String X, String Y) {
                 String XY=X+Y;
                 String YX=Y+X;
-                return XY.compareTo(YX)>0?-1:1;
+               return XY.compareTo(YX)>0?-1:1;
             }
         });
 
-        System.out.println("List after sorting"+stringList);
+        System.out.println("List after sorting : "+stringList);
         StringBuilder result=new StringBuilder("");
         for(String s:stringList){
             result.append(s);

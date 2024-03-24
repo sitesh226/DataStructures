@@ -63,7 +63,7 @@ public class PowerSetOfArrayElements {
 
         PowerSetOfArrayElements soa= new PowerSetOfArrayElements();
     //    int[] nums= {1, 2, 3, 4, 5};
-      int[] nums= {1, 2};
+      int[] nums= {1, 2,3};
 //        List<List<Integer>> subsets = soa.subsets(nums);
 //
 //        for (List<Integer> subset: subsets) {

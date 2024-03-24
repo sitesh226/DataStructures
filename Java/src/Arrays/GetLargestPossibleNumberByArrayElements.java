@@ -16,14 +16,23 @@ public class GetLargestPossibleNumberByArrayElements {
     private static String getLargestNumber(List<Integer> list){
         List<String> stringList=list.stream().map(String::valueOf).collect(Collectors.toList());
 
+
         Collections.sort(stringList, new Comparator<String>() {
             @Override
             public int compare(String X, String Y) {
                 String XY=X+Y;
                 String YX=Y+X;
-               return XY.compareTo(YX)>0?-1:1;
+                return XY.compareTo(YX)>0?-1:1;
             }
         });
+
+        // Same code with lambda
+//        Collections.sort(stringList, (X, Y) -> {
+//            String XY=X+Y;
+//            String YX=Y+X;
+//           return XY.compareTo(YX)>0?-1:1;
+//        });
+
 
         System.out.println("List after sorting : "+stringList);
         StringBuilder result=new StringBuilder("");

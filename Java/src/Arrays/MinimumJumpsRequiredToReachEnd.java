@@ -32,10 +32,35 @@ public class MinimumJumpsRequiredToReachEnd {
     }
 
 
+
+    public static  int getJumps2(int[] arr){
+        // Use Greedy approach find maximum possible jump point at every step.
+
+        int jumps=0;
+        for(int i=0;i<arr.length;i++){
+            jumps++;
+            i=i+ getHighestPossibleJumpFromCurrent(i, arr);
+        }
+
+        return jumps;
+    }
+
+    public static int getHighestPossibleJumpFromCurrent(int current_index, int[] arr){
+        int maxNum=arr[current_index];
+        int endIndex=Math.max(arr[current_index], arr.length);
+
+        for(int i= current_index+1; i<endIndex;i++){
+           maxNum = Math.max(maxNum,arr[i]);
+        }
+        return maxNum;
+    }
+
+
     public static void main(String[] args) {
-      //  int [] arr={4,3,5,8,9,2,6,7,6,8,9};
-        int [] arr={ 6, 3, 1, 1, 4 };
-        System.out.println("Minimum jumps required:"+ getMinimumJumps(arr));
+        int [] arr={4,3,5,8,9,2,6,7,6,8,9};
+       // int [] arr={ 6, 3, 1, 1, 4 };
+//        System.out.println("Minimum jumps required:"+ getMinimumJumps(arr));
+        System.out.println("Minimum jumps required:"+ getJumps2(arr));
 
     }
 }

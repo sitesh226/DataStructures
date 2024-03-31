@@ -49,7 +49,7 @@ public class TestEquality {
 //        System.out.println(s);
 //
 //        TestEquality equality=new TestEquality();
-//        System.out.println(TestEquality.testTryCatchFinally());
+        System.out.println(TestEquality.testTryCatchFinally());
 
         TestEquality.testStringSplit(".123.43.6");
     }

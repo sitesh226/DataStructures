@@ -69,10 +69,10 @@ public class FIndMinLengthSubArrayToBeSorted {
     private static void getMinLengthUnsortedArrayToBeSortedSol2(int[] arr){
 //        Declare a temporary array temp same as given array arr.
 //        Sort the temporary array .
-//        Initialize variable s with 0 and e with 0.
-//        Checking the unequal element from start and storing it in s variable .
-//        Checking the unequal element from end and storing it in e variable.
-//        Returning (e-s+1) .
+//        Initialize variable start with 0 and end with 0.
+//        Checking the unequal element from start and storing it in start variable .
+//        Checking the unequal element from end and storing it in end variable.
+//        Returning (end-start+1) .
 //         Printing the result .
 
         List<Integer> output = Arrays.stream(arr).boxed().collect(Collectors.toList());

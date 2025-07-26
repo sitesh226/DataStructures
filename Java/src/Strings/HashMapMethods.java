@@ -26,7 +26,7 @@ public class HashMapMethods {
 //            map.put("team3",0);
 //        }
         // this is equivalent to :
-        map.computeIfAbsent("team3",value->0);
+        map.putIfAbsent("team3", 0);
         System.out.println(map);
 
         map.putIfAbsent("team4",1);

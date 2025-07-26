@@ -13,6 +13,11 @@ package Arrays;
 *  Output: 2
  */
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class SmallestPositiveMissingNumber {
 
     private static int  moveNegativesToFront(int[] arr ){
@@ -57,8 +62,37 @@ public class SmallestPositiveMissingNumber {
 
     }
 
+
+    private static int getMissingSmallestPositive2(int[] arr){
+        int negativesPosition=moveNegativesToFront(arr);
+        int [] positiveArray=new int[arr.length-negativesPosition];
+
+        int j=0;
+        for(int i=negativesPosition;i<arr.length;i++){
+            positiveArray[j]=arr[i];
+            j++;
+        }
+
+        List<Integer> list=  Arrays.stream(positiveArray).boxed().collect(Collectors.toList());
+
+        int smallestPositive= Integer.MAX_VALUE;
+        int k=0;
+        for(int i=1;i<=positiveArray.length;i++){
+            if(list.contains(i))
+                k++;
+            else {
+                smallestPositive = i;
+                break;
+            }
+
+        }
+        return smallestPositive;
+
+    }
+
     public static void main(String[] args) {
         int arr[] = { 2, 3, -7, 6, 8, 1, -10, 15 };
-        System.out.println("First missing positive: "+ getMissingSmallestPositive(arr));
+//        System.out.println("First missing positive: "+ getMissingSmallestPositive(arr));
+        System.out.println("First missing positive: "+ getMissingSmallestPositive2(arr));
     }
 }

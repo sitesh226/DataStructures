@@ -43,7 +43,16 @@ public class MoveAllZeroesToOneSide {
 
 
     public static void main(String[] args) {
+
+
         int [] arr={1,2,0,4,0,5,0,7,9,0};
+        System.out.print("Array Input :  ");
+        for(int j:arr){
+            System.out.print(j+ "  ");
+
+        }
+        System.out.println();
+
         moveAllZeroesToRight(arr);
         moveAllZeroesToLeft(arr);
 

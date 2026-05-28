@@ -61,23 +61,37 @@ public class InsertNewIntervalAndMergeOverlappingIntervals {
 
     public static void main(String[] args) {
         ArrayList<Intervals> initialIntervals=new ArrayList<>();
+
         initialIntervals.add(new Intervals(1,2));
         initialIntervals.add(new Intervals(3,5));
         initialIntervals.add(new Intervals(6,7));
         initialIntervals.add(new Intervals(8,10));
         initialIntervals.add(new Intervals(12,16));
+
+        System.out.println("Intervals before insert:  ");
+        for (Intervals i:initialIntervals){
+            System.out.print("["+i.start+","+i.end+"]  ");
+        }
+        System.out.println();
         ArrayList<Intervals> result=insertNewInterval(initialIntervals,new Intervals(4,9));
-        System.out.println("Intervals after merge:  ");
+        System.out.println("Intervals after insert:  ");
         for (Intervals i:result){
             System.out.print("["+i.start+","+i.end+"]  ");
         }
 
 
+        System.out.println();
         ArrayList<Intervals> initialIntervalsBeforeMerging=new ArrayList<>();
         initialIntervalsBeforeMerging.add(new Intervals(1,3));
         initialIntervalsBeforeMerging.add(new Intervals(2,6));
         initialIntervalsBeforeMerging.add(new Intervals(8,10));
         initialIntervalsBeforeMerging.add(new Intervals(15,18));
+
+        System.out.println("Intervals before merging:  ");
+        for (Intervals i:initialIntervalsBeforeMerging){
+            System.out.print("["+i.start+","+i.end+"]  ");
+        }
+
         ArrayList<Intervals> resultAfterMerging=mergeOverLappingIntervals(initialIntervalsBeforeMerging);
         System.out.println("\nIntervals after merging overlapping intervals:  ");
         for (Intervals i:resultAfterMerging){

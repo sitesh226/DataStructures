@@ -59,6 +59,23 @@ public class PowerSetOfArrayElements {
     }
 
 
+
+    public static void generatePowerSetOrdered(int[] arr, Deque<Integer> set, int index) {
+        if (index == arr.length) {
+            System.out.println(set);
+            return;
+        }
+
+        // include
+        set.addLast(arr[index]);
+        generatePowerSetOrdered(arr, set, index + 1);
+
+        // exclude
+        set.removeLast();
+        generatePowerSetOrdered(arr, set, index + 1);
+    }
+
+
     public static void main(String[] args) {
 
         PowerSetOfArrayElements soa= new PowerSetOfArrayElements();
@@ -71,7 +88,8 @@ public class PowerSetOfArrayElements {
  //       }
 
         Deque<Integer> set=new ArrayDeque<>();
-        generatePowerSet(nums,set,nums.length);
+       // generatePowerSet(nums,set,nums.length);
+        generatePowerSetOrdered(nums, new ArrayDeque<>(), 0);
 
 
 

@@ -19,7 +19,7 @@ public class LongestDigitPrefix {
                     j++;
 
                 }
-                i=j;
+
                 return temp.toString();
             }
 
